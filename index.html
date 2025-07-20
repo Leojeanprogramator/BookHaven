@@ -1,107 +1,153 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Book Haven - Seu Refúgio Literário</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Esconde o botão categorias no desktop e mostra só no mobile */
-    #toggleCategorias {
-      display: none;
-    }
+<header class="header" id="header">
+  <div class="imagem-banner">
+    <img src="https://i.postimg.cc/bvYYVqwz/Capa-de-canal-confeitaria-delicado-gradiente-rosa-pink-banner-do-youtube-3.png" alt="Banner abaixo da logo" />
+  </div>
+</header>
 
-    @media (max-width: 768px) {
-      #toggleCategorias {
-        display: block;
-        margin: 10px;
-        padding: 10px 15px;
-        font-size: 16px;
-        cursor: pointer;
-      }
+<!-- VÍDEO EXPLICATIVO -->
+<section class="video-acesso">
+  <div class="video-wrapper">
+    <iframe width="100%" height="400" src="https://www.youtube.com/embed/SEU_VIDEO_ID" 
+      title="Como funciona o acesso" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
 
-      /* Esconde o menu de categorias inicialmente no mobile */
-      #categoriasMenu {
-        display: none;
-        margin: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        background: #fff;
-      }
+<section class="funil-container">
+  <h2 class="funil-title">Quer ter acesso ao site agora mesmo?</h2>
+  
+  <p class="funil-text">
+   Não perca a chance de garantir acesso imediato ao nosso site exclusivo por apenas R$5,90/mês!
+Clique no botão abaixo para liberar seu acesso! e começar a ler qualquer livro disponível no site!
+  </p>
+  
+  <a href="https://seulink.com" class="btn-adquirir">Quero Liberar o acesso!</a>
+</section>
+</section>
+  
 
-      /* Quando o menu estiver aberto, vamos usar uma classe .open para exibir */
-      #categoriasMenu.open {
-        display: block;
-      }
-    }
-  </style>
-</head>
-<body>
+ <div class="funil-beneficios">
+  <h3>O que você vai receber:</h3>
+  <ul>
+    <li>Acesso ilimitado a todos os livros do site, leia o quanto quiser sem pagar por livro.</li>
+    <li>Economia real: pare de gastar fortunas comprando livros avulsos ou assinaturas caras.</li>
+    <li>Conteúdo imediato e sem enrolação, assine e comece a ler na hora!</li>
+    <li>Liberdade total enquanto sua assinatura estiver ativa, sem limites, sem surpresas.</li>
+    <li>Atualizações constantes com novos títulos adicionados regularmente.</li>
+  </ul>
+</div>
 
-  <header class="header" id="header">
-    <div class="logo">
-      <img src="https://i.postimg.cc/yxZdWLYP/logo-transparente.png" alt="Logo Book Haven" />
-      <span>Book Haven</span>
+
+
+<div class="faq-container">
+    <div class="faq-header">
+        <h1 class="faq-title">❓ FAQ</h1>
+        <p class="faq-subtitle"> perguntas mais frequentes sobre nosso Site!</p>
     </div>
-    <input type="text" id="searchInput" class="search-input" placeholder="O que você quer ler?" />
-  </header>
 
-  <section class="hero" id="heroSection">
-    <video autoplay muted loop playsinline>
-      <source src="https://cdn.pixabay.com/video/2020/09/08/49375-459436752_large.mp4" type="video/mp4" />
-      Seu navegador não suporta vídeo.
-    </video>
-    <div class="hero-text">
-      <h1>Seu Refúgio Literário</h1>
-      <p>Encontre o livro perfeito para você</p>
-      <a href="#catalogoView" class="btn-explore">Ver Mais</a>
+    <div class="faq-item">
+  <button class="faq-question">
+    <span class="question-icon">🚀</span>
+    <span class="question-text">Como funciona?</span>
+    <span class="toggle-icon">▼</span>
+  </button>
+  <div class="faq-answer">
+    <div class="faq-answer-content">
+      <p>O site funciona assim:</p>
+      <p>Você terá acesso a todos os livros disponíveis! são mais de <strong>500 títulos</strong> por um valor muito acessível.</p>
+      <p>Após a assinatura, que está por apenas <strong>R$ 5,90/mês</strong>, o seu acesso é liberado em até <strong>15 minutos</strong>!</p>
+      <p>A partir daí, você poderá aproveitar todo o conteúdo disponível, lendo quantos livros quiser, quando quiser.</p>
     </div>
-  </section>
+  </div>
+</div>
 
-  <!-- Botão que só aparece no mobile para abrir/fechar categorias -->
-<button id="toggleCategorias" 
-        class="menu-categorias" 
-        aria-expanded="false" 
-        aria-controls="categoriasMenu" 
-        aria-label="Abrir menu de categorias">
-  &#9776; Categorias
-</button>
 
-<!-- Menu de categorias -->
-<nav class="categorias" id="categoriasMenu" aria-label="Categorias de livros">
-  <button class="categoria-btn ativa" data-categoria="todos" aria-pressed="true">Todos</button>
-  <button class="categoria-btn" data-categoria="desenvolvimento" aria-pressed="false">Desenvolvimento Pessoal</button>
-  <button class="categoria-btn" data-categoria="romance" aria-pressed="false">Romance</button>
-  <button class="categoria-btn" data-categoria="ficcao" aria-pressed="false">Ficção Científica</button>
-  <button class="categoria-btn" data-categoria="drama" aria-pressed="false">Drama</button>
-  <button class="categoria-btn" data-categoria="suspense" aria-pressed="false">Suspense</button>
-</nav>
+  <div class="faq-item">
+  <button class="faq-question">
+    <span class="question-icon">💰</span>
+    <span class="question-text">Quais são os valores e formas de pagamento?</span>
+    <span class="toggle-icon">▼</span>
+  </button>
+  <div class="faq-answer">
+    <div class="faq-answer-content">
+      <p>O valor da assinatura é de apenas <strong>R$ 5,90 por mês</strong>, um preço super acessível para ter acesso ilimitado a toda a nossa biblioteca.</p>
+      <div class="benefit-item">
+        <span class="benefit-icon">💳</span>
+        <span>Pagamento seguro com cartão de crédito</span>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">⚡</span>
+        <span>Pagamento rápido via PIX</span>
+      </div>
+    </div>
+  </div>
+</div>
 
-<!-- Script necessário para alternar visibilidade no mobile -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const toggleBtn = document.getElementById('toggleCategorias');
-    const menu = document.getElementById('categoriasMenu');
 
-    toggleBtn.addEventListener('click', function () {
-      const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-      toggleBtn.setAttribute('aria-expanded', !isExpanded);
-      menu.style.display = isExpanded ? 'none' : 'flex';
-    });
-  });
-</script>
 
-  <main>
-    <section id="catalogoView">
-      <div class="produtos" id="produtos"></div>
-      <div class="paginacao" id="paginacao"></div>
-    </section>
 
-    <section id="detalhesView" class="detalhes-view" hidden>
-      <button class="btn-voltar" aria-label="Voltar ao catálogo">← Voltar ao catálogo</button>
-      <div id="detalhesProduto" class="detalhes-produto"></div>
-    </section>
-  </main>
+    <div class="faq-item">
+  <button class="faq-question">
+    <span class="question-icon">⏱️</span>
+    <span class="question-text">Qual é o prazo para liberar o acesso ao site?</span>
+    <span class="toggle-icon">▼</span>
+  </button>
+  <div class="faq-answer">
+    <div class="faq-answer-content">
+      <p>O acesso ao site é liberado em até <strong>10 a 15 minutos</strong> após o pagamento ser confirmado pelo sistema.</p>
+      <p>Você receberá um e-mail informando que a <strong>Book Haven</strong> está compartilhando uma pasta exclusiva com você, garantindo seu acesso imediato à biblioteca digital.</p>
+    </div>
+  </div>
+</div>
 
-</body>
-</html>
+
+   <div class="faq-item">
+  <button class="faq-question">
+    <span class="question-icon">🔒</span>
+    <span class="question-text">Meus dados estão seguros com vocês?</span>
+    <span class="toggle-icon">▼</span>
+  </button>
+  <div class="faq-answer">
+    <div class="faq-answer-content">
+      <p>Segurança e privacidade são nossas prioridades máximas:</p>
+      <div class="benefit-item">
+        <span class="benefit-icon">🔐</span>
+        <span>Criptografia de dados em todas as transmissões</span>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">📋</span>
+        <span>Termos de confidencialidade assinados</span>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">🛡️</span>
+        <span>Compliance com LGPD e melhores práticas de segurança</span>
+      </div>
+      <p>O pagamento é processado com total segurança por uma empresa confiável chamada <strong>Kirvano</strong>, garantindo que seus dados financeiros estejam protegidos.</p>
+      <p>Seus dados nunca são compartilhados com terceiros e são protegidos com os mais altos padrões de segurança.</p>
+    </div>
+  </div>
+</div>
+
+
+    <div class="faq-item">
+  <button class="faq-question">
+    <span class="question-icon">📞</span>
+    <span class="question-text">Como posso entrar em contato?</span>
+    <span class="toggle-icon">▼</span>
+  </button>
+  <div class="faq-answer">
+    <div class="faq-answer-content">
+      <p>O suporte está disponível exclusivamente pelo WhatsApp para garantir respostas rápidas e eficientes:</p>
+      <div class="benefit-item">
+        <span class="benefit-icon">📱</span>
+        <span>WhatsApp: (11) 93433-9580 (resposta em até 1 hora)</span>
+      </div>
+      <p>Caso tenha qualquer problema ou dúvida, envie uma mensagem por lá que nossa equipe estará pronta para te ajudar!</p>
+    </div>
+  </div>
+</div>
+
+ 
